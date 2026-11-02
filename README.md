@@ -1,4 +1,20 @@
-# Secure Notes App with JWT
+# Secure Notes App
+
+A Spring Boot REST API for private notes, secured with JWT authentication and role-based access (USER and ADMIN).
+
+## Tech
+- Java 21, Spring Boot 4, Spring Security, Spring Data JPA
+- MariaDB
+- JWT (jjwt)
+
+## Run
+1. Create a MariaDB database and set the connection in `application.properties`.
+2. Set the `JWT_SECRET` environment variable (Base64, at least 32 bytes).
+3. Start the app: `./mvnw spring-boot:run`
+
+## Endpoints
+- `POST /auth/register`: create an account
+- `POST /auth/login`: log in and receive a JWT# Secure Notes App with JWT
 
 A Spring Boot REST API where people keep private notes. Users register, log in to receive a JWT, and send that token with every request. Each note belongs to one user, and nobody else can read or change it.
 
